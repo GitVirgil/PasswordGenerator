@@ -15,5 +15,6 @@ function writePassword() {
 function generatePassword() {
   var passwordLength = prompt("Please enter the number of characters you want your password to be. Must be between 8 and 128");
 
+  var numbers = confirm("Do you want numbers in your password?");
 
 generateBtn.addEventListener("click", writePassword);
