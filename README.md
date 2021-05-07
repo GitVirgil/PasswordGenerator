@@ -12,7 +12,8 @@ Secure User Password  Genererator.
 
 
 
-![alt text](03-javascript-homework-demo.png)
+![alt text](/Users/virgil/Documents/homework3/vp3passwordgenerator/03-javascript-homework-demo.png)
+
 
 
 
