@@ -21,4 +21,6 @@ function generatePassword() {
 
   var upperCases = confirm("Do you want uppercases in your password?");
 
+  var Special = confirm("Do you want special characters in your password?");
+
 generateBtn.addEventListener("click", writePassword);
