@@ -73,3 +73,11 @@ var minimumCount = 0;
     minimumSpecialCharacters = functionArray.getSpecialCharacters();
     minimumCount++;
   };
+
+// variable for loop below
+var randomPasswordGenerated = "";
+
+//random character loop
+for (var i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
+  var randomNumberPicked = Math.floor(Math.random() * 4);
+}
