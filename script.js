@@ -52,3 +52,24 @@ var minimumCount = 0;
   
     }
   };
+
+  // if select check
+
+  if (numbers === true) {
+    minimumNumbers = functionArray.getNumbers();
+  }
+
+  if (lowerCases === true) {
+    minimumLowerCases = functionArray.getLowerCases();
+    minimumCount++;
+  }
+
+  if (upperCases === true) {
+    minimumUpperCases = functionArray.getUpperCases();
+    minimumCount++;
+  }
+
+  if (Special = true) {
+    minimumSpecialCharacters = functionArray.getSpecialCharacters();
+    minimumCount++;
+  };
