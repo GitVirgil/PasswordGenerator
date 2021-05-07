@@ -80,4 +80,15 @@ var randomPasswordGenerated = "";
 //random character loop
 for (var i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
   var randomNumberPicked = Math.floor(Math.random() * 4);
+
+  randomPasswordGenerated += randomNumberPicked;
 }
+
+// Character adding to password assurance
+randomPasswordGenerated += minimumNumbers;
+    randomPasswordGenerated += minimumLowerCases;
+    randomPasswordGenerated += minimumUpperCases;
+    randomPasswordGenerated += minimumSpecialCharacters;
+
+    return randomPasswordGenerated;
+
