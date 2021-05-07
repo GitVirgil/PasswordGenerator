@@ -17,4 +17,6 @@ function generatePassword() {
 
   var numbers = confirm("Do you want numbers in your password?");
 
+  var lowerCases = confirm("Do you want lowercases in your password?");
+
 generateBtn.addEventListener("click", writePassword);
