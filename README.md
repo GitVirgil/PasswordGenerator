@@ -1,2 +1,0 @@
-# vp3passwordgenerator
-
