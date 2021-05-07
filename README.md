@@ -12,7 +12,7 @@ Secure User Password  Genererator.
 
 
 
-![alt text](passwordimage.jpeg)
+![alt text](password.png)
 
 
 
