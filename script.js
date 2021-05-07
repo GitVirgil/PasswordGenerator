@@ -23,4 +23,32 @@ function generatePassword() {
 
   var Special = confirm("Do you want special characters in your password?");
 
-generateBtn.addEventListener("click", writePassword);
+
+//Minimum Character Count
+var minimumCount = 0;
+
+    var minimumNumbers = "";
+    var minimumLowerCases = "";
+    var minimumUpperCases = "";
+    var minimumSpecialCharacters = "";
+
+    //Generate Code
+    var functionArray = {
+      getNumbers: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
+      },
+  
+      getLowerCases: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
+      },
+  
+      getUpperCases: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+      },
+  
+      getSpecialCharacters: function() {
+        return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+      }
+  
+    }
+  };
