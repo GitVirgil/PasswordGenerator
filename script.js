@@ -1,40 +1,39 @@
-// Special Character Code
+// Most of this code was obtained from: natashagils/Simple-Password-Generator after study, did not find more efficient method
 const specialCharacters = "!@#$%^&*()";
 const generateBtn = document.querySelector("generate");
 generateButton.addEventListener("click", writePassword);
-// Write password to the #password input
+// Write password 
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-
 // Prompt  response code upon click
 function generatePassword() {
-    var passwordLength = prompt("Please enter the number of characters you want your password to be. Must be between 8 and 128");
+    let passwordLength = prompt("Please enter the number of characters you want your password to be. Must be between 8 and 128");
 
-    var numbers = confirm("Do you want numbers in your password?");
+    let numbers = confirm("Do you want numbers in your password?");
 
-    var lowerCases = confirm("Do you want lowercases in your password?");
+    let lowerCases = confirm("Do you want lowercases in your password?");
 
-    var upperCases = confirm("Do you want uppercases in your password?");
+    let upperCases = confirm("Do you want uppercases in your password?");
 
-    var Special = confirm("Do you want special characters in your password?");
+    let Special = confirm("Do you want special characters in your password?");
 
 // Minimum character count
-    var minimumCount = 0;
+    let minimumCount = 0;
 
-    var minimumNumbers = "";
-    var minimumLowerCases = "";
-    var minimumUpperCases = "";
-    var minimumSpecialCharacters = "";
+    let minimumNumbers = "";
+    let minimumLowerCases = "";
+    let minimumUpperCases = "";
+    let minimumSpecialCharacters = "";
 
-// Generate Code
+// Generate Code-considered long hand change, but not as clean/efficient
 
-  var functionArray = {
+  let functionArray = {
     getNumbers: function() {
       return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
     },
@@ -53,7 +52,7 @@ function generatePassword() {
 
   };
 
-  // if select check
+  // if check Statement
 
     if (numbers === true) {
       minimumNumbers = functionArray.getNumbers();
@@ -74,18 +73,17 @@ function generatePassword() {
       minimumCount++;
     }
 
-    // variable for loop below
-    var randomPasswordGenerated = "";
+    // run variable for loop below
+    let randomPasswordGenerated = "";
 
-    // random character loop
+    // run random character loop
     for (var i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
-      var randomNumberPicked = Math.floor(Math.random() * 4);
+      let randomNumberPicked = Math.floor(Math.random() * 5);
 
       randomPasswordGenerated += randomNumberPicked;
 
     }
-    // character adding to password assurance
-
+  
     randomPasswordGenerated += minimumNumbers;
     randomPasswordGenerated += minimumLowerCases;
     randomPasswordGenerated += minimumUpperCases;
